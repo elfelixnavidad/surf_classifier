@@ -26,8 +26,8 @@ def main():
         
     for d in data['data']['wave']:
         ts = int(d['timestamp'])
-        surf_min = float(d['surf']['raw']['min'])
-        surf_max = float(d['surf']['raw']['max'])
+        surf_min = float(np.round(d['surf']['raw']['min'], 2))
+        surf_max = float(np.round(d['surf']['raw']['max'], 2))
         surf_humanRelation = d['surf']['humanRelation']
 
         swell_list = list(d['swells'])
